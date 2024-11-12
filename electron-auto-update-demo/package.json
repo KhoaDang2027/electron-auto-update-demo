@@ -12,9 +12,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "electron": "^33.2.0",
-    "electron-builder": "^24.13.3"
-  },
+   "electron": "^33.2.0",
+   "electron-builder": "^24.13.3"
+},
+
   "dependencies": {
     "electron-updater": "^6.3.9"
   },
