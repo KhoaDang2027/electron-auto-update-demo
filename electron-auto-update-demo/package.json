@@ -1,0 +1,40 @@
+{
+  "name": "electron-auto-update-demo",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  },
+  "build": {
+    "appId": "com.example.electronautoupdate",
+    "productName": "Electron Auto Update Demo",
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ]
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "KhoaDang2027",
+      "repo": "electron-auto-update-demo"
+    }
+  }
+}
