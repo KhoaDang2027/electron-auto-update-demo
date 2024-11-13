@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electron Auto Update Demo</title>
     <style>
         body {
@@ -32,26 +32,19 @@
     <h1>Welcome to Electron Auto Update Demo!</h1>
     <p>This is a simple Electron app that demonstrates automatic updates.</p>
     <button id="checkUpdateBtn">Check for Updates</button>
-
     <script>
         document.getElementById('checkUpdateBtn').addEventListener('click', () => {
-            // Gọi API từ preload.js để kiểm tra cập nhật
             window.electron.checkForUpdates();
         });
-
-        // Lắng nghe các sự kiện từ main process qua preload.js
         window.electron.onUpdateAvailable((event, info) => {
             alert('Update available: ' + JSON.stringify(info));
         });
-
         window.electron.onUpdateNotAvailable((event, info) => {
             alert('No update available: ' + JSON.stringify(info));
         });
-
         window.electron.onUpdateError((event, err) => {
             alert('Error during update: ' + err);
         });
-
         window.electron.onUpdateDownloaded((event, info) => {
             alert('Update downloaded: ' + JSON.stringify(info));
         });
